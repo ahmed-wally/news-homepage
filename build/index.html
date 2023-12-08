@@ -15,153 +15,165 @@
     <title>Frontend Mentor | News homepage</title>
   </head>
 
-  <body class="flex flex-col m-10">
-    <header class="flex justify-between mb-16">
-		<img src="assets/images/logo.svg" alt="the logo of the website">
-		<div class="flex items-center gap-10">
-			<a href="#" class="hover:text-soft-red ">Home</a>
-			<a href="#" class="hover:text-soft-red ">New</a> 
-			<a href="#" class="hover:text-soft-red ">Popular</a>
-			<a href="#" class="hover:text-soft-red ">Trending</a>
-			<a href="#" class="hover:text-soft-red ">Categories</a>
-		</div>
+  <body class="font-inter flex flex-col m-10">
+    <header class="flex justify-between mb-12 sm:mb-16">
+      <img src="assets/images/logo.svg" alt="the logo of the website" />
+      <div class="hidden sm:flex sm:items-center sm:gap-10">
+        <a href="#" class="hover:text-soft-red">Home</a>
+        <a href="#" class="hover:text-soft-red">New</a>
+        <a href="#" class="hover:text-soft-red">Popular</a>
+        <a href="#" class="hover:text-soft-red">Trending</a>
+        <a href="#" class="hover:text-soft-red">Categories</a>
+      </div>
+      <button data-open-modal class="sm:hidden">
+        <img class="w-9 h-4" src="assets/images/icon-menu.svg" alt="the menu" />
+      </button>
     </header>
+    <dialog data-modal class="h-screen w-4/5 mr-0 mt-0">
+      <div class="flex flex-col items-center gap-10 m-5">
+        <button data-close-modal class="self-end">
+          <img
+            class="w-9 h-4"
+            src="assets/images/icon-menu-close.svg"
+            alt="the menu"
+          />
+        </button>
+        <a href="#" class="hover:text-soft-red self-start">Home</a>
+        <a href="#" class="hover:text-soft-red self-start">New</a>
+        <a href="#" class="hover:text-soft-red self-start">Popular</a>
+        <a href="#" class="hover:text-soft-red self-start">Trending</a>
+        <a href="#" class="hover:text-soft-red self-start">Categories</a>
+      </div>
+    </dialog>
 
-	<main class="grid grid-cols-3 grid-rows-2 gap-8">
+    <main
+      class="sm:grid sm:grid-cols-3 sm:grid-rows-2 flex flex-col gap-10 sm:gap-8"
+    >
+      <article class="sm:col-span-2">
+        <img src="assets/images/image-web-3-desktop.jpg" class="mb-9" />
 
+        <section class="sm:flex gap-10 sm:gap-24">
+          <h1 class="text-[54px] font-extrabold mb-4 row-span-2 leading-[54px]">
+            The Bright Future of Web 3.0?
+          </h1>
 
+          <section class="flex flex-col gap-6 justify-between">
+            <p class="text-dark-grayish-blue leading-6">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
 
-		<article class="col-span-2">
-			<img src="assets/images/image-web-3-desktop.jpg" class="mb-9">
+            <button
+              class="hover:bg-very-dark-blue bg-soft-red tracking-[4px] text-off-white font-bold w-44 h-12"
+            >
+              Read more
+            </button>
+          </section>
+        </section>
+      </article>
 
-			<section class="flex gap-24">
-				<h1 class="text-[54px] font-extrabold row-span-2 leading-[54px]">
-					The Bright Future of Web 3.0?
-				</h1>
+      <article class="bg-very-dark-blue p-6">
+        <h1 class="text-soft-orange text-4xl font-bold">New</h1>
+        <br />
 
-				<section class="flex flex-col justify-between ">
-					<p class="text-dark-grayish-blue leading-6">
-					We dive into the next evolution of the web
-					that claims to put the power of the platforms back into the hands of the
-					people. But is it really fulfilling its promise?
-					</p>
+        <h2 class="text-off-white font-bold">
+          <a href="#" class="hover:text-soft-orange"
+            >Hydrogen VS Electric Cars</a
+          >
+        </h2>
+        <br />
 
-					<button class="hover:bg-very-dark-blue bg-soft-red tracking-[4px] text-off-white font-bold w-44 h-12">Read more</button>
-				</section>
-			</section>
+        <p class="text-dark-grayish-blue">
+          Will hydrogen-fueled cars ever catch up to EVs?
+        </p>
+        <br />
 
-		</article>
+        <hr />
 
-		<!-- <br> -->
-		<!-- <br> -->
-		<!-- <br> -->
-		<!-- <br> -->
-		<!-- <br> -->
-		<!-- <br> -->
-		<!-- <br> -->
-		<!-- <br> -->
+        <br />
 
-		<article class="bg-very-dark-blue p-6">
-			<h1 class="text-soft-orange text-4xl font-bold">New</h1>
-			<br>
+        <h2 class="text-off-white font-bold">
+          <a href="#" class="hover:text-soft-orange"
+            >The Downsides of AI Artistry</a
+          >
+        </h2>
+        <br />
 
-			<h2 class="text-off-white font-bold">
-				<a href="#" class="hover:text-soft-orange">Hydrogen VS Electric Cars</a>
+        <p class="text-dark-grayish-blue">
+          What are the possible adverse effects of on-demand AI image
+          generation?
+        </p>
+        <br />
 
-			</h2> 
-			<br>
-			
-			<p class="text-dark-grayish-blue">Will hydrogen-fueled cars ever catch up to EVs?</p>
-			<br>
-		
-			<hr/>
+        <hr />
 
+        <br />
 
-			<br>
+        <h2 class="text-off-white font-bold">
+          <a href="#" class="hover:text-soft-orange"
+            >Is VC Funding Drying Up?</a
+          >
+        </h2>
+        <br />
 
-			<h2 class="text-off-white font-bold">
-				
-				<a href="#" class="hover:text-soft-orange">The Downsides of AI Artistry</a>
-			</h2> 
-			<br>
-			
-			<p class="text-dark-grayish-blue">
-			What are the possible adverse effects of on-demand AI image
-			generation?
-			</p>
-			<br>
-		
-			<hr/>
+        <p class="text-dark-grayish-blue">
+          Private funding by VC firms is down 50% YOY. We take a look at what
+          that means.
+        </p>
+        <br />
+      </article>
 
-			<br>
+      <article class="flex h-32 gap-6">
+        <img src="assets/images/image-retro-pcs.jpg" />
+        <div>
+          <h1 class="text-dark-grayish-blue font-bold text-3xl">01</h1>
+          <h2 class="font-extrabold">
+            <a href="#" class="hover:text-soft-red">Reviving Retro PCs</a>
+          </h2>
+          <p class="font-medium text-dark-grayish-blue">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </article>
 
-			<h2 class="text-off-white font-bold">
-				
-				<a href="#" class="hover:text-soft-orange">Is VC Funding Drying Up?</a>
-			</h2> 
-			<br>
-			
-			<p class="text-dark-grayish-blue">
-			
-			Private funding by VC firms is down 50%
-			YOY. We take a look at what that means.
-			</p>
-			<br>
+      <article class="flex h-32 gap-6">
+        <img src="assets/images/image-top-laptops.jpg" />
+        <div>
+          <h1 class="text-dark-grayish-blue font-bold text-3xl">02</h1>
+          <h2 class="font-extrabold">
+            <a href="#" class="hover:text-soft-red">Top 10 Laptops of 2022</a>
+          </h2>
+          <p class="font-medium text-dark-grayish-blue">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </article>
 
+      <article class="flex h-32 gap-6">
+        <img src="assets/images/image-gaming-growth.jpg" />
+        <div>
+          <h1 class="text-dark-grayish-blue font-bold text-3xl">03</h1>
+          <h2 class="font-extrabold">
+            <a href="#" class="hover:text-soft-red">The Growth of Gaming</a>
+          </h2>
+          <p class="font-medium text-dark-grayish-blue">
+            How the pandemic has sparked fresh opportunities
+          </p>
+        </div>
+      </article>
+    </main>
+    <script>
+      const openButton = document.querySelector("[data-open-modal]");
+      const closeButton = document.querySelector("[data-close-modal]");
+      const modal = document.querySelector("[data-modal]");
 
-		</article>
-
-
-
-
-		<article class="flex h-32  gap-6">
-			<img src="assets/images/image-retro-pcs.jpg">
-			<div>
-				<h1 class="text-dark-grayish-blue font-bold text-3xl">01</h1>
-				<h2 class="font-extrabold">
-					<a  href="#" class="hover:text-soft-red">Reviving Retro PCs</a>
-				</h2>
-				<p class="font-medium text-dark-grayish-blue">What happens when old PCs are given modern upgrades?</p>
-			</div>
-		</article>
-
-
-		<article class="flex h-32  gap-6">
-			<img src="assets/images/image-top-laptops.jpg">
-			<div>
-				<h1 class="text-dark-grayish-blue font-bold text-3xl">02</h1>
-				<h2 class="font-extrabold">
-					<a  href="#" class="hover:text-soft-red">Top 10 Laptops of 2022</a> 
-				</h2>
-				<p class="font-medium text-dark-grayish-blue">Our best picks for various needs and budgets.</p>
-			</div>
-		</article>
-
-		<article class="flex h-32  gap-6">
-			<img src="assets/images/image-gaming-growth.jpg">
-			<div>
-				<h1 class="text-dark-grayish-blue font-bold text-3xl">03</h1>
-				<h2 class="font-extrabold">
-					<a  href="#" class="hover:text-soft-red">The Growth of Gaming</a>
-				</h2>
-				<p class="font-medium text-dark-grayish-blue">How the pandemic has sparked fresh opportunities</p>
-			</div>
-		</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	</main>
+      openButton.addEventListener("click", () => {
+        modal.showModal();
+      });
+      closeButton.addEventListener("click", () => {
+        modal.close();
+      });
+    </script>
   </body>
 </html>
