@@ -80,8 +80,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"prettier-on": "onchange \"./build/index.html\" -- npx prettier --write --ignore-unknown {{changed}}",
-	"tailwind-watch": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch"
+	"prettier-on": "onchange \"./docs/index.html\" -- npx prettier --write --ignore-unknown {{changed}}",
+	"tailwind-watch": "npx tailwindcss -i ./src/input.css -o ./docs/css/style.css --watch"
   },
   "author": "",
   "license": "ISC"
